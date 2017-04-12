@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>To-do_Vue</title>
+</head>
+
+<body>
+	<div id="app">
+		<input placeholder="add title" v-model="todo.title" />
+		<input placeholder="add text" v-model="todo.text" />
+		<input placeholder="add assign" v-model="todo.assign" />
+		<button v-on:click="AddTodo(todo)">Add todo</button>
+		<ol>
+			<li v-for="(todo, index) in todos">
+				{{ todo.title }} : {{ todo.text }}
+				<template v-if="todo.assign">: {{ todo.assign }}</template>
+			</li>
+		</ol>
+	</div>
+	<script src="https://unpkg.com/vue"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+
+</html>
