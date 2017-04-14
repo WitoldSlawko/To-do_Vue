@@ -4,6 +4,9 @@
 <head>
 	<meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>To-do_Vue</title>
+	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.24.0/babel.min.js"></script>
+	<script type="text/javascript" src="js/require.js"></script>
+	<script type="text/javascript" src="js/r.js"></script>  -->
 </head>
 
 <body>
@@ -19,8 +22,23 @@
 			</li>
 		</ol>
 	</div>
+	<div id="test_route">
+		<h1>Hello Route!</h1>
+		<p>
+			<!-- use router-link component for navigation. -->
+			<!-- specify the link by passing the `to` prop. -->
+			<!-- <router-link> will be rendered as an `<a>` tag by default -->
+			<router-link to="/foo">Go to Foo</router-link>
+			<router-link to="/bar">Go to Bar</router-link>
+		</p>
+		<!-- route outlet -->
+		<!-- component matched by the route will render here -->
+		<router-view></router-view>
+	</div>
 	<script src="https://unpkg.com/vue"></script>
+	<script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
 	<script type="text/javascript" src="js/app.js"></script>
+	<!-- <script type="text/javascript" src="js/test.js"></script> -->
 </body>
 
 </html>
